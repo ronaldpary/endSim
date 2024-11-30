@@ -83,10 +83,12 @@
             this.rndOrdered = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.order = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leftoverNewspaper = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.repayment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lostSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lostSalesCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dailyNetCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sumDailyNetCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dailyAveregeCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpDescripcionRespuesta.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -919,6 +921,9 @@
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel2.Controls.Add(this.dgvEvents);
             this.guna2Panel2.Location = new System.Drawing.Point(3, 242);
             this.guna2Panel2.Name = "guna2Panel2";
@@ -928,8 +933,13 @@
             // 
             // dgvEvents
             // 
+            this.dgvEvents.AllowUserToAddRows = false;
+            this.dgvEvents.AllowUserToDeleteRows = false;
+            this.dgvEvents.AllowUserToResizeColumns = false;
+            this.dgvEvents.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvEvents.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEvents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -938,8 +948,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvEvents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvEvents.ColumnHeadersHeight = 28;
-            this.dgvEvents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvEvents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEvents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.day,
             this.rndDemand,
@@ -947,10 +956,12 @@
             this.rndOrdered,
             this.order,
             this.cost,
+            this.leftoverNewspaper,
             this.repayment,
             this.lostSales,
             this.lostSalesCost,
             this.dailyNetCost,
+            this.sumDailyNetCost,
             this.dailyAveregeCost});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -963,7 +974,9 @@
             this.dgvEvents.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEvents.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvEvents.Location = new System.Drawing.Point(0, 0);
+            this.dgvEvents.MultiSelect = false;
             this.dgvEvents.Name = "dgvEvents";
+            this.dgvEvents.ReadOnly = true;
             this.dgvEvents.RowHeadersVisible = false;
             this.dgvEvents.Size = new System.Drawing.Size(1174, 395);
             this.dgvEvents.TabIndex = 0;
@@ -978,9 +991,9 @@
             this.dgvEvents.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvEvents.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvEvents.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvEvents.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvEvents.ThemeStyle.HeaderStyle.Height = 28;
-            this.dgvEvents.ThemeStyle.ReadOnly = false;
+            this.dgvEvents.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEvents.ThemeStyle.HeaderStyle.Height = 41;
+            this.dgvEvents.ThemeStyle.ReadOnly = true;
             this.dgvEvents.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvEvents.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvEvents.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -993,56 +1006,92 @@
             // 
             this.day.HeaderText = "Day";
             this.day.Name = "day";
+            this.day.ReadOnly = true;
+            this.day.Width = 90;
             // 
             // rndDemand
             // 
             this.rndDemand.HeaderText = "rnd Demand";
             this.rndDemand.Name = "rndDemand";
+            this.rndDemand.ReadOnly = true;
+            this.rndDemand.Width = 91;
             // 
             // demand
             // 
             this.demand.HeaderText = "Demand";
             this.demand.Name = "demand";
+            this.demand.ReadOnly = true;
+            this.demand.Width = 90;
             // 
             // rndOrdered
             // 
             this.rndOrdered.HeaderText = "rnd Order";
             this.rndOrdered.Name = "rndOrdered";
+            this.rndOrdered.ReadOnly = true;
+            this.rndOrdered.Width = 90;
             // 
             // order
             // 
             this.order.HeaderText = "Order";
             this.order.Name = "order";
+            this.order.ReadOnly = true;
+            this.order.Width = 91;
             // 
             // cost
             // 
             this.cost.HeaderText = "Cost";
             this.cost.Name = "cost";
+            this.cost.ReadOnly = true;
+            this.cost.Width = 90;
+            // 
+            // leftoverNewspaper
+            // 
+            this.leftoverNewspaper.HeaderText = "Leftover Newspaper";
+            this.leftoverNewspaper.Name = "leftoverNewspaper";
+            this.leftoverNewspaper.ReadOnly = true;
+            this.leftoverNewspaper.Width = 90;
             // 
             // repayment
             // 
             this.repayment.HeaderText = "Repayment";
             this.repayment.Name = "repayment";
+            this.repayment.ReadOnly = true;
+            this.repayment.Width = 90;
             // 
             // lostSales
             // 
             this.lostSales.HeaderText = "Lost Sales";
             this.lostSales.Name = "lostSales";
+            this.lostSales.ReadOnly = true;
+            this.lostSales.Width = 91;
             // 
             // lostSalesCost
             // 
             this.lostSalesCost.HeaderText = "Lost Sales Cost";
             this.lostSalesCost.Name = "lostSalesCost";
+            this.lostSalesCost.ReadOnly = true;
+            this.lostSalesCost.Width = 90;
             // 
             // dailyNetCost
             // 
             this.dailyNetCost.HeaderText = "Daily Net Cost";
             this.dailyNetCost.Name = "dailyNetCost";
+            this.dailyNetCost.ReadOnly = true;
+            this.dailyNetCost.Width = 90;
+            // 
+            // sumDailyNetCost
+            // 
+            this.sumDailyNetCost.HeaderText = "Accumulator DNC";
+            this.sumDailyNetCost.Name = "sumDailyNetCost";
+            this.sumDailyNetCost.ReadOnly = true;
+            this.sumDailyNetCost.Width = 91;
             // 
             // dailyAveregeCost
             // 
             this.dailyAveregeCost.HeaderText = "Daily Averege Cost";
             this.dailyAveregeCost.Name = "dailyAveregeCost";
+            this.dailyAveregeCost.ReadOnly = true;
+            this.dailyAveregeCost.Width = 90;
             // 
             // UserControlN1
             // 
@@ -1116,10 +1165,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rndOrdered;
         private System.Windows.Forms.DataGridViewTextBoxColumn order;
         private System.Windows.Forms.DataGridViewTextBoxColumn cost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn leftoverNewspaper;
         private System.Windows.Forms.DataGridViewTextBoxColumn repayment;
         private System.Windows.Forms.DataGridViewTextBoxColumn lostSales;
         private System.Windows.Forms.DataGridViewTextBoxColumn lostSalesCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn dailyNetCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sumDailyNetCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn dailyAveregeCost;
     }
 }

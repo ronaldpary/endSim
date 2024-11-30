@@ -69,6 +69,8 @@ namespace Newspapers.Logic
         {
             rowPrevious.demand = previousDemand;
             rowPrevious.lostSales = previousLostSales;
+            rowPrevious.sumDailyNetCost = 0;
+
             control.showRow(rowPrevious);
 
             for (int i = 0; i < days; i++)
@@ -79,6 +81,17 @@ namespace Newspapers.Logic
 
                 calculateOrder();
 
+                rowCurrent.leftoverNewspaper = Math.Max(0, rowCurrent.order - rowCurrent.demand);
+                rowCurrent.lostSales = Math.Max(0, rowCurrent.demand - rowCurrent.order);
+
+                rowCurrent.cost = cost * rowCurrent.order;
+                rowCurrent.repayment = repayment * rowCurrent.leftoverNewspaper;
+                rowCurrent.lostSalesCost = lostCost * rowCurrent.lostSales;
+
+                rowCurrent.dailyNetCost = rowCurrent.cost + rowCurrent.lostSalesCost - rowCurrent.repayment;
+                rowCurrent.sumDailyNetCost = rowCurrent.dailyNetCost + rowPrevious.sumDailyNetCost;
+                rowCurrent.dailyAveregeCost = rowCurrent.sumDailyNetCost / rowCurrent.day;
+                
                 if (rowCurrent.day >= from && rowCurrent.day <= to)
                 {
                     control.showRow(rowCurrent);
@@ -86,14 +99,19 @@ namespace Newspapers.Logic
 
                 rowPrevious.demand = rowCurrent.demand;
                 rowPrevious.lostSales = rowCurrent.lostSales;
+                rowPrevious.sumDailyNetCost = rowCurrent.sumDailyNetCost;
 
+            }
+
+            if (rowCurrent.day > to)
+            {
+                control.showRow(rowCurrent);
             }
         }
 
         private void calculateOrder()
         {
             rowCurrent.order = rowPrevious.demand + rowPrevious.lostSales;
-            rowCurrent.lostSales = rowCurrent.order - rowCurrent.demand;
         }
 
         private void calculateDemand()

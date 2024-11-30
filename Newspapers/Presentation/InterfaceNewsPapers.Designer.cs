@@ -33,9 +33,7 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.userControlN1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.userControlN21 = new Newspapers.Presentation.UserControlN2();
             this.userControlN11 = new Newspapers.Presentation.UserControlN1();
-            this.userControlN22 = new Newspapers.Presentation.UserControlN2();
             this.guna2Panel1.SuspendLayout();
             this.userControlN1.SuspendLayout();
             this.SuspendLayout();
@@ -112,21 +110,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlN1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.userControlN1.Controls.Add(this.userControlN22);
-            this.userControlN1.Controls.Add(this.userControlN21);
             this.userControlN1.Controls.Add(this.userControlN11);
             this.userControlN1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.userControlN1.Location = new System.Drawing.Point(221, 12);
             this.userControlN1.Name = "userControlN1";
             this.userControlN1.Size = new System.Drawing.Size(1199, 652);
             this.userControlN1.TabIndex = 3;
-            // 
-            // userControlN21
-            // 
-            this.userControlN21.Location = new System.Drawing.Point(291, 381);
-            this.userControlN21.Name = "userControlN21";
-            this.userControlN21.Size = new System.Drawing.Size(150, 150);
-            this.userControlN21.TabIndex = 1;
             // 
             // userControlN11
             // 
@@ -138,14 +127,6 @@
             this.userControlN11.Size = new System.Drawing.Size(1199, 652);
             this.userControlN11.TabIndex = 0;
             // 
-            // userControlN22
-            // 
-            this.userControlN22.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.userControlN22.Location = new System.Drawing.Point(466, 404);
-            this.userControlN22.Name = "userControlN22";
-            this.userControlN22.Size = new System.Drawing.Size(150, 150);
-            this.userControlN22.TabIndex = 2;
-            // 
             // InterfaceNewsPapers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,7 +135,6 @@
             this.Controls.Add(this.userControlN1);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "InterfaceNewsPapers";
-            this.Text = "Form1";
             this.guna2Panel1.ResumeLayout(false);
             this.userControlN1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -169,8 +149,6 @@
         private Guna.UI2.WinForms.Guna2Panel userControlN1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Presentation.UserControlN1 userControlN11;
-        private Presentation.UserControlN2 userControlN21;
-        private Presentation.UserControlN2 userControlN22;
     }
 }
 
