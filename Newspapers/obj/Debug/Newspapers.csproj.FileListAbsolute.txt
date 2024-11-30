@@ -11,3 +11,4 @@ C:\Users\Ronald\Desktop\Trabajos Practicos GH\End Sim\endSim\Newspapers\obj\Debu
 C:\Users\Ronald\Desktop\Trabajos Practicos GH\End Sim\endSim\Newspapers\obj\Debug\Newspapers.csproj.CopyComplete
 C:\Users\Ronald\Desktop\Trabajos Practicos GH\End Sim\endSim\Newspapers\obj\Debug\Newspapers.exe
 C:\Users\Ronald\Desktop\Trabajos Practicos GH\End Sim\endSim\Newspapers\obj\Debug\Newspapers.pdb
+C:\Users\Ronald\Desktop\Trabajos Practicos GH\End Sim\endSim\Newspapers\obj\Debug\Newspapers.Presentation.UserControlN1.resources

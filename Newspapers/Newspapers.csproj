@@ -52,6 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logic\Controller.cs" />
+    <Compile Include="Logic\Parameters.cs" />
+    <Compile Include="Logic\Row.cs" />
     <Compile Include="Presentation\InterfaceNewsPapers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +77,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentation\InterfaceNewsPapers.resx">
       <DependentUpon>InterfaceNewsPapers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\UserControlN1.resx">
+      <DependentUpon>UserControlN1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -99,7 +105,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Logic\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
