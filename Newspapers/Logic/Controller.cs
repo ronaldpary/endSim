@@ -69,7 +69,6 @@ namespace Newspapers.Logic
         {
             rowPrevious.demand = previousDemand;
             rowPrevious.lostSales = previousLostSales;
-            rowPrevious.sumDailyNetCost = 0;
 
             control.showRow(rowPrevious);
 
@@ -118,23 +117,23 @@ namespace Newspapers.Logic
         {
             rowCurrent.rndDemand = double.Parse(rndDemand.NextDouble().ToString("F2"));
 
-            if (rowCurrent.rndDemand <=  frequency1)
+            if (rowCurrent.rndDemand <  frequency1)
             {
                 rowCurrent.demand = demand1;
             }
-            else if (rowCurrent.rndDemand <= frequency1 + frequency2)
+            else if (rowCurrent.rndDemand < frequency1 + frequency2)
             {
                 rowCurrent.demand = demand2;
             }
-            else if (rowCurrent.rndDemand <= frequency1 + frequency2 + frequency3)
+            else if (rowCurrent.rndDemand < frequency1 + frequency2 + frequency3)
             {
                 rowCurrent.demand = demand3;
             }
-            else if (rowCurrent.rndDemand <= frequency1 + frequency2 + frequency3 + frequency4)
+            else if (rowCurrent.rndDemand < frequency1 + frequency2 + frequency3 + frequency4)
             {
                 rowCurrent.demand = demand4;
             }
-            else if (rowCurrent.rndDemand <= frequency1 + frequency2 + frequency3 + frequency4 + frequency5)
+            else if (rowCurrent.rndDemand < frequency1 + frequency2 + frequency3 + frequency4 + frequency5)
             {
                 rowCurrent.demand = demand5;
             }

@@ -61,7 +61,9 @@ namespace Newspapers.Presentation
         private void btnComenzar_Click(object sender, EventArgs e)
         {
             controller = new Controller(this);
-            if (txtSimulations.Text != "" && txtFrom.Text != "" && txtTo.Text != "")
+            if (txtSimulations.Text != "" && txtFrom.Text != "" && txtTo.Text != "" && txtPrice.Text != "" && txtRepayment.Text != "" && txtLostCost.Text != "" && txtPreviousDemand.Text != "" && txtPreviousLostSales.Text != ""
+                && txtDemand1.Text != "" && txtDemand2.Text != "" && txtDemand3.Text != "" && txtDemand4.Text != "" && txtDemand5.Text != "" && txtDemand6.Text != ""
+                && txtFrequency1.Text != "" && txtFrequency2.Text != "" && txtFrequency3.Text != "" && txtFrequency4.Text != "" && txtFrequency5.Text != "" && txtFrequency6.Text != "")
             {
                 double frequency1 = Convert.ToDouble(txtFrequency1.Text);
                 double frequency2 = Convert.ToDouble(txtFrequency2.Text);
@@ -76,9 +78,17 @@ namespace Newspapers.Presentation
                 {
                     MessageBox.Show("The sum of the frequencies must not exceed 1.");
                 }
+                else if (sum < 1)
+                {
+                    MessageBox.Show("The sum of the frequencies must be equal to 1.");
+                }
                 else if (sum < 0)
                 {
                     MessageBox.Show("The sum of the frequencies must not be less than 0.");
+                }
+                else if (Convert.ToDouble(txtFrom.Text) > Convert.ToDouble(txtTo.Text))
+                {
+                    MessageBox.Show("From cannot be greater than To.");
                 }
                 else
                 {

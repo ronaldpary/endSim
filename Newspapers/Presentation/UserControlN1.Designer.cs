@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnComenzar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -691,11 +692,11 @@
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(323, 156);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(356, 156);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(64, 18);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(46, 18);
             this.guna2HtmlLabel8.TabIndex = 58;
-            this.guna2HtmlLabel8.Text = "Ordered:";
+            this.guna2HtmlLabel8.Text = "Order:";
             // 
             // txtFrequency2
             // 
@@ -939,7 +940,6 @@
             this.dgvEvents.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvEvents.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvEvents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -963,14 +963,14 @@
             this.dailyNetCost,
             this.sumDailyNetCost,
             this.dailyAveregeCost});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEvents.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEvents.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvEvents.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEvents.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvEvents.Location = new System.Drawing.Point(0, 0);
@@ -1007,91 +1007,81 @@
             this.day.HeaderText = "Day";
             this.day.Name = "day";
             this.day.ReadOnly = true;
-            this.day.Width = 90;
             // 
             // rndDemand
             // 
             this.rndDemand.HeaderText = "rnd Demand";
             this.rndDemand.Name = "rndDemand";
             this.rndDemand.ReadOnly = true;
-            this.rndDemand.Width = 91;
             // 
             // demand
             // 
             this.demand.HeaderText = "Demand";
             this.demand.Name = "demand";
             this.demand.ReadOnly = true;
-            this.demand.Width = 90;
             // 
             // rndOrdered
             // 
             this.rndOrdered.HeaderText = "rnd Order";
             this.rndOrdered.Name = "rndOrdered";
             this.rndOrdered.ReadOnly = true;
-            this.rndOrdered.Width = 90;
             // 
             // order
             // 
             this.order.HeaderText = "Order";
             this.order.Name = "order";
             this.order.ReadOnly = true;
-            this.order.Width = 91;
             // 
             // cost
             // 
             this.cost.HeaderText = "Cost";
             this.cost.Name = "cost";
             this.cost.ReadOnly = true;
-            this.cost.Width = 90;
             // 
             // leftoverNewspaper
             // 
             this.leftoverNewspaper.HeaderText = "Leftover Newspaper";
             this.leftoverNewspaper.Name = "leftoverNewspaper";
             this.leftoverNewspaper.ReadOnly = true;
-            this.leftoverNewspaper.Width = 90;
             // 
             // repayment
             // 
             this.repayment.HeaderText = "Repayment";
             this.repayment.Name = "repayment";
             this.repayment.ReadOnly = true;
-            this.repayment.Width = 90;
             // 
             // lostSales
             // 
             this.lostSales.HeaderText = "Lost Sales";
             this.lostSales.Name = "lostSales";
             this.lostSales.ReadOnly = true;
-            this.lostSales.Width = 91;
             // 
             // lostSalesCost
             // 
             this.lostSalesCost.HeaderText = "Lost Sales Cost";
             this.lostSalesCost.Name = "lostSalesCost";
             this.lostSalesCost.ReadOnly = true;
-            this.lostSalesCost.Width = 90;
             // 
             // dailyNetCost
             // 
             this.dailyNetCost.HeaderText = "Daily Net Cost";
             this.dailyNetCost.Name = "dailyNetCost";
             this.dailyNetCost.ReadOnly = true;
-            this.dailyNetCost.Width = 90;
             // 
             // sumDailyNetCost
             // 
             this.sumDailyNetCost.HeaderText = "Accumulator DNC";
             this.sumDailyNetCost.Name = "sumDailyNetCost";
             this.sumDailyNetCost.ReadOnly = true;
-            this.sumDailyNetCost.Width = 91;
             // 
             // dailyAveregeCost
             // 
+            dataGridViewCellStyle3.Format = "N4";
+            dataGridViewCellStyle3.NullValue = null;
+            this.dailyAveregeCost.DefaultCellStyle = dataGridViewCellStyle3;
             this.dailyAveregeCost.HeaderText = "Daily Averege Cost";
             this.dailyAveregeCost.Name = "dailyAveregeCost";
             this.dailyAveregeCost.ReadOnly = true;
-            this.dailyAveregeCost.Width = 90;
             // 
             // UserControlN1
             // 

@@ -19,7 +19,7 @@ namespace Newspapers.Logic
         public double lostSalesCost { get; set; } = -1;
         public double leftoverNewspaper { get; set; } = -1;
         public double dailyNetCost { get; set; } = -1;
-        public double sumDailyNetCost { get; set; } = -1;
+        public double sumDailyNetCost { get; set; } = 0;
         public double dailyAveregeCost { get; set; } = -1;
     }
 }
