@@ -11,7 +11,7 @@ namespace Newspapers.Logic
         public double day { get; set; } = 0;
         public double rndDemand { get; set; } = -1;
         public double demand { get; set; } = -1;
-        public double rndOrdered { get; set; } = -1;
+        public double rndOrder { get; set; } = -1;
         public double order { get; set; } = -1;
         public double cost { get; set; } = -1;
         public double repayment {get; set; } = -1;

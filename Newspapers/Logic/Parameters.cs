@@ -25,6 +25,15 @@ namespace Newspapers.Logic
         public double frequency4 = 0.05;
         public double frequency5 = 0.10;
         public double frequency6 = 0.10;
+
+        public double order1 = 21;
+        public double order2 = 22;
+        public double order3 = 23;
+        public double order4 = 24;
+        public double frequencyP21 = 0.25;
+        public double frequencyP22 = 0.25;
+        public double frequencyP23 = 0.25;
+        public double frequencyP24 = 0.25;
         public Parameters () { }
     }
 }

@@ -55,6 +55,7 @@
     <Compile Include="Logic\Controller.cs" />
     <Compile Include="Logic\Parameters.cs" />
     <Compile Include="Logic\Row.cs" />
+    <Compile Include="Logic\RowP2.cs" />
     <Compile Include="Presentation\InterfaceNewsPapers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,12 +67,6 @@
     </Compile>
     <Compile Include="Presentation\UserControlN1.Designer.cs">
       <DependentUpon>UserControlN1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation\UserControlN2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Presentation\UserControlN2.Designer.cs">
-      <DependentUpon>UserControlN2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
