@@ -16,6 +16,7 @@ namespace Newspapers.Presentation
     {
         Parameters parameters = new Parameters();
         Controller controller;
+
         public UserControlN1()
         {
             InitializeComponent();
@@ -69,6 +70,15 @@ namespace Newspapers.Presentation
 
         }
 
+        private bool IsNonNegativeNumber(string input)
+        {
+            if (double.TryParse(input, out double result) && result >= 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
         private void btnComenzar_Click(object sender, EventArgs e)
         {
             controller = new Controller(this);
@@ -76,37 +86,67 @@ namespace Newspapers.Presentation
                 && txtDemand1.Text != "" && txtDemand2.Text != "" && txtDemand3.Text != "" && txtDemand4.Text != "" && txtDemand5.Text != "" && txtDemand6.Text != ""
                 && txtFrequency1.Text != "" && txtFrequency2.Text != "" && txtFrequency3.Text != "" && txtFrequency4.Text != "" && txtFrequency5.Text != "" && txtFrequency6.Text != "")
             {
-                double frequency1 = Convert.ToDouble(txtFrequency1.Text);
-                double frequency2 = Convert.ToDouble(txtFrequency2.Text);
-                double frequency3 = Convert.ToDouble(txtFrequency3.Text);
-                double frequency4 = Convert.ToDouble(txtFrequency4.Text);
-                double frequency5 = Convert.ToDouble(txtFrequency5.Text);
-                double frequency6 = Convert.ToDouble(txtFrequency6.Text);
+                if (IsNonNegativeNumber(txtSimulations.Text) &&
+                        IsNonNegativeNumber(txtFrom.Text) &&
+                        IsNonNegativeNumber(txtTo.Text) &&
 
-                double sum = frequency1 + frequency2 + frequency3 + frequency4 + frequency5 + frequency6;
+                        IsNonNegativeNumber(txtPrice.Text) &&
+                        IsNonNegativeNumber(txtRepayment.Text) &&
+                        IsNonNegativeNumber(txtLostCost.Text) &&
+                        IsNonNegativeNumber(txtPreviousDemand.Text) &&
+                        IsNonNegativeNumber(txtPreviousLostSales.Text) &&
 
-                if (sum > 1)
+                        IsNonNegativeNumber(txtDemand1.Text) &&
+                        IsNonNegativeNumber(txtDemand2.Text) &&
+                        IsNonNegativeNumber(txtDemand3.Text) &&
+                        IsNonNegativeNumber(txtDemand4.Text) &&
+                        IsNonNegativeNumber(txtDemand5.Text) &&
+                        IsNonNegativeNumber(txtDemand6.Text) &&
+
+                        IsNonNegativeNumber(txtFrequency1.Text) &&
+                        IsNonNegativeNumber(txtFrequency2.Text) &&
+                        IsNonNegativeNumber(txtFrequency3.Text) &&
+                        IsNonNegativeNumber(txtFrequency4.Text) &&
+                        IsNonNegativeNumber(txtFrequency5.Text) &&
+                        IsNonNegativeNumber(txtFrequency6.Text))
                 {
-                    MessageBox.Show("The sum of the frequencies must not exceed 1.");
-                }
-                else if (sum < 1)
-                {
-                    MessageBox.Show("The sum of the frequencies must be equal to 1.");
-                }
-                else if (sum < 0)
-                {
-                    MessageBox.Show("The sum of the frequencies must not be less than 0.");
-                }
-                else if (Convert.ToDouble(txtFrom.Text) > Convert.ToDouble(txtTo.Text))
-                {
-                    MessageBox.Show("From cannot be greater than To.");
+                    double frequency1 = Convert.ToDouble(txtFrequency1.Text);
+                    double frequency2 = Convert.ToDouble(txtFrequency2.Text);
+                    double frequency3 = Convert.ToDouble(txtFrequency3.Text);
+                    double frequency4 = Convert.ToDouble(txtFrequency4.Text);
+                    double frequency5 = Convert.ToDouble(txtFrequency5.Text);
+                    double frequency6 = Convert.ToDouble(txtFrequency6.Text);
+
+                    double sum = Math.Round((frequency1 + frequency2 + frequency3 + frequency4 + frequency5 + frequency6), 2);
+
+                    if (sum > 1)
+                    {
+                        MessageBox.Show("The sum of the demand frequencies must not exceed 1.");
+                    }
+                    else if (sum < 1)
+                    {
+                        MessageBox.Show("The sum of the demand frequencies must be equal to 1.");
+                    }
+                    else if (sum < 0)
+                    {
+                        MessageBox.Show("The sum of the demand frequencies must not be less than 0.");
+                    }
+                    else if (Convert.ToDouble(txtFrom.Text) > Convert.ToDouble(txtTo.Text))
+                    {
+                        MessageBox.Show("From cannot be greater than To.");
+                    }
+                    else
+                    {
+                        showFrequencyDemand.Enabled = true;
+                        dgvEvents.Rows.Clear();
+                        validateData(parameters);
+                        controller.startSimulation(this.parameters, Convert.ToInt32(txtSimulations.Text), Convert.ToInt32(txtFrom.Text), Convert.ToInt32(txtTo.Text));
+
+                    }
                 }
                 else
                 {
-                    dgvEvents.Rows.Clear();
-                    validateData(parameters);
-                    controller.startSimulation(this.parameters, Convert.ToInt32(txtSimulations.Text), Convert.ToInt32(txtFrom.Text), Convert.ToInt32(txtTo.Text));
-
+                    MessageBox.Show("Please enter only non-negative numbers.");
                 }
             }
             else
@@ -173,24 +213,13 @@ namespace Newspapers.Presentation
                 if (worth != -1)
                 {
                     dgvEvents.Rows[index].Cells[name].Value = worth;
-
-                    if (name == "cost")
-                    {
-                        dgvEvents.Rows[index].Cells["cost"].Style.BackColor = Color.FromArgb(255, 192, 192);
-                    }
-                    if (name == "repayment")
-                    {
-                        dgvEvents.Rows[index].Cells["repayment"].Style.BackColor = Color.FromArgb(128, 255, 128);
-
-                    }
-                    if (name == "lostSalesCost")
-                    {
-                        dgvEvents.Rows[index].Cells["lostSalesCost"].Style.BackColor = Color.FromArgb(255, 192, 192);
-                    }
-                    if (name == "dailyAveregeCost")
-                    {
-                        dgvEvents.Rows[index].Cells["dailyAveregeCost"].Style.BackColor = Color.FromArgb(255, 255, 128);
-                    }
+                    dgvEvents.Rows[index].Cells["cost"].Style.BackColor = Color.FromArgb(255, 128, 128);
+                    dgvEvents.Rows[index].Cells["order"].Style.BackColor = Color.FromArgb(255, 192, 192);
+                    dgvEvents.Rows[index].Cells["repayment"].Style.BackColor = Color.FromArgb(128, 255, 128);
+                    dgvEvents.Rows[index].Cells["leftoverNewspaper"].Style.BackColor = Color.FromArgb(192, 255, 192);
+                    dgvEvents.Rows[index].Cells["lostSalesCost"].Style.BackColor = Color.FromArgb(255, 128, 128);
+                    dgvEvents.Rows[index].Cells["lostSales"].Style.BackColor = Color.FromArgb(255, 192, 192);
+                    dgvEvents.Rows[index].Cells["dailyAveregeCost"].Style.BackColor = Color.FromArgb(255, 255, 128);
                 }
                 
             }
@@ -210,24 +239,13 @@ namespace Newspapers.Presentation
                 if (worth != -1)
                 {
                     dgvEventsP2.Rows[index].Cells[name].Value = worth;
-
-                    if (name == "costP2")
-                    {
-                        dgvEventsP2.Rows[index].Cells["costP2"].Style.BackColor = Color.FromArgb(255, 192, 192);  
-                    }
-                    if (name == "repaymentP2")
-                    {
-                        dgvEventsP2.Rows[index].Cells["repaymentP2"].Style.BackColor = Color.FromArgb(128, 255, 128);
-
-                    }
-                    if (name == "lostSalesCostP2")
-                    {
-                        dgvEventsP2.Rows[index].Cells["lostSalesCostP2"].Style.BackColor = Color.FromArgb(255, 192, 192);
-                    }
-                    if (name == "dailyAveregeCostP2")
-                    {
-                        dgvEventsP2.Rows[index].Cells["dailyAveregeCostP2"].Style.BackColor = Color.FromArgb(255, 255, 128);
-                    }
+                    dgvEventsP2.Rows[index].Cells["costP2"].Style.BackColor = Color.FromArgb(255, 128, 128);
+                    dgvEventsP2.Rows[index].Cells["orderP2"].Style.BackColor = Color.FromArgb(255, 192, 192);
+                    dgvEventsP2.Rows[index].Cells["repaymentP2"].Style.BackColor = Color.FromArgb(128, 255, 128);
+                    dgvEventsP2.Rows[index].Cells["leftoverNewspaperP2"].Style.BackColor = Color.FromArgb(192, 255, 192);
+                    dgvEventsP2.Rows[index].Cells["lostSalesCostP2"].Style.BackColor = Color.FromArgb(255, 128, 128);
+                    dgvEventsP2.Rows[index].Cells["lostSalesP2"].Style.BackColor = Color.FromArgb(255, 192, 192);
+                    dgvEventsP2.Rows[index].Cells["dailyAveregeCostP2"].Style.BackColor = Color.FromArgb(255, 255, 128);                                   
                 }
 
             }
@@ -251,66 +269,184 @@ namespace Newspapers.Presentation
         private void btnComenzar2_Click(object sender, EventArgs e)
         {
             controller = new Controller(this);
-            if (txtSimulations.Text != "" && txtFrom.Text != "" && txtTo.Text != "" && txtPrice.Text != "" && txtRepayment.Text != "" && txtLostCost.Text != "" && txtPreviousDemand.Text != "" && txtPreviousLostSales.Text != ""
+            if (txtSimulations.Text != "" && txtFrom.Text != "" && txtTo.Text != "" && txtPrice.Text != "" && txtRepayment.Text != "" && txtLostCost.Text != ""
                 && txtDemand1.Text != "" && txtDemand2.Text != "" && txtDemand3.Text != "" && txtDemand4.Text != "" && txtDemand5.Text != "" && txtDemand6.Text != ""
                 && txtFrequency1.Text != "" && txtFrequency2.Text != "" && txtFrequency3.Text != "" && txtFrequency4.Text != "" && txtFrequency5.Text != "" && txtFrequency6.Text != ""
                 && txtOrder1.Text != "" && txtOrder2.Text != "" && txtOrder3.Text != "" && txtOrder4.Text != ""
                 && txtFrequencyP21.Text != "" && txtFrequencyP22.Text != "" && txtFrequencyP23.Text != "" && txtFrequencyP24.Text != "")
             {
-                double frequency1 = Convert.ToDouble(txtFrequency1.Text);
-                double frequency2 = Convert.ToDouble(txtFrequency2.Text);
-                double frequency3 = Convert.ToDouble(txtFrequency3.Text);
-                double frequency4 = Convert.ToDouble(txtFrequency4.Text);
-                double frequency5 = Convert.ToDouble(txtFrequency5.Text);
-                double frequency6 = Convert.ToDouble(txtFrequency6.Text);
-                double sum = frequency1 + frequency2 + frequency3 + frequency4 + frequency5 + frequency6;
+                if (IsNonNegativeNumber(txtSimulations.Text) &&
+                        IsNonNegativeNumber(txtFrom.Text) &&
+                        IsNonNegativeNumber(txtTo.Text) &&
 
-                double frequencyP21 = Convert.ToDouble(txtFrequencyP21.Text);
-                double frequencyP22 = Convert.ToDouble(txtFrequencyP22.Text);
-                double frequencyP23 = Convert.ToDouble(txtFrequencyP23.Text);
-                double frequencyP24 = Convert.ToDouble(txtFrequencyP24.Text);
-                double sumP2 = frequencyP21 + frequencyP22 + frequencyP23 + frequencyP24;
+                        IsNonNegativeNumber(txtPrice.Text) &&
+                        IsNonNegativeNumber(txtRepayment.Text) &&
+                        IsNonNegativeNumber(txtLostCost.Text) &&
 
-                if (sum > 1)
+                        IsNonNegativeNumber(txtDemand1.Text) &&
+                        IsNonNegativeNumber(txtDemand2.Text) &&
+                        IsNonNegativeNumber(txtDemand3.Text) &&
+                        IsNonNegativeNumber(txtDemand4.Text) &&
+                        IsNonNegativeNumber(txtDemand5.Text) &&
+                        IsNonNegativeNumber(txtDemand6.Text) &&
+                        IsNonNegativeNumber(txtFrequency1.Text) &&
+                        IsNonNegativeNumber(txtFrequency2.Text) &&
+                        IsNonNegativeNumber(txtFrequency3.Text) &&
+                        IsNonNegativeNumber(txtFrequency4.Text) &&
+                        IsNonNegativeNumber(txtFrequency5.Text) &&
+                        IsNonNegativeNumber(txtFrequency6.Text) &&
+
+                        IsNonNegativeNumber(txtOrder1.Text) &&
+                        IsNonNegativeNumber(txtOrder2.Text) &&
+                        IsNonNegativeNumber(txtOrder3.Text) &&
+                        IsNonNegativeNumber(txtOrder4.Text) &&
+                        IsNonNegativeNumber(txtFrequencyP21.Text) &&
+                        IsNonNegativeNumber(txtFrequencyP22.Text) &&
+                        IsNonNegativeNumber(txtFrequencyP23.Text) &&
+                        IsNonNegativeNumber(txtFrequencyP24.Text))
                 {
-                    MessageBox.Show("The sum of the frequencies must not exceed 1.");
-                }
-                else if (sum < 1)
-                {
-                    MessageBox.Show("The sum of the frequencies must be equal to 1.");
-                }
-                else if (sum < 0)
-                {
-                    MessageBox.Show("The sum of the frequencies must not be less than 0.");
-                }
-                else if (sumP2 > 1)
-                {
-                    MessageBox.Show("The sum of the frequencies must not exceed 1.");
-                }
-                else if (sumP2 < 1)
-                {
-                    MessageBox.Show("The sum of the frequencies must be equal to 1.");
-                }
-                else if (sumP2 < 0)
-                {
-                    MessageBox.Show("The sum of the frequencies must not be less than 0.");
-                }
-                else if (Convert.ToDouble(txtFrom.Text) > Convert.ToDouble(txtTo.Text))
-                {
-                    MessageBox.Show("From cannot be greater than To.");
+                    double frequency1 = Convert.ToDouble(txtFrequency1.Text);
+                    double frequency2 = Convert.ToDouble(txtFrequency2.Text);
+                    double frequency3 = Convert.ToDouble(txtFrequency3.Text);
+                    double frequency4 = Convert.ToDouble(txtFrequency4.Text);
+                    double frequency5 = Convert.ToDouble(txtFrequency5.Text);
+                    double frequency6 = Convert.ToDouble(txtFrequency6.Text);
+                    double sum = Math.Round((frequency1 + frequency2 + frequency3 + frequency4 + frequency5 + frequency6), 2);
+
+                    double frequencyP21 = Convert.ToDouble(txtFrequencyP21.Text);
+                    double frequencyP22 = Convert.ToDouble(txtFrequencyP22.Text);
+                    double frequencyP23 = Convert.ToDouble(txtFrequencyP23.Text);
+                    double frequencyP24 = Convert.ToDouble(txtFrequencyP24.Text);
+                    double sumP2 = frequencyP21 + frequencyP22 + frequencyP23 + frequencyP24;
+
+                    if (sum > 1)
+                    {
+                        MessageBox.Show("The sum of the demand frequencies must not exceed 1.");
+                    }
+                    else if (sum < 1)
+                    {
+                        MessageBox.Show("The sum of the demand frequencies must be equal to 1.");
+                    }
+                    else if (sum < 0)
+                    {
+                        MessageBox.Show("The sum of the demand frequencies must not be less than 0.");
+                    }
+                    else if (sumP2 > 1)
+                    {
+                        MessageBox.Show("The sum of the order frequencies must not exceed 1.");
+                    }
+                    else if (sumP2 < 1)
+                    {
+                        MessageBox.Show("The sum of the order frequencies must be equal to 1.");
+                    }
+                    else if (sumP2 < 0)
+                    {
+                        MessageBox.Show("The sum of the order frequencies must not be less than 0.");
+                    }
+                    else if (Convert.ToDouble(txtFrom.Text) > Convert.ToDouble(txtTo.Text))
+                    {
+                        MessageBox.Show("From cannot be greater than To.");
+                    }
+                    else
+                    {
+                        showFrequencyOrder.Enabled = true;
+                        dgvEventsP2.Rows.Clear();
+                        validateData(parameters);
+                        controller.startSimulationP2(this.parameters, Convert.ToInt32(txtSimulations.Text), Convert.ToInt32(txtFrom.Text), Convert.ToInt32(txtTo.Text));
+
+                    }
                 }
                 else
                 {
-                    dgvEventsP2.Rows.Clear();
-                    validateData(parameters);
-                    controller.startSimulationP2(this.parameters, Convert.ToInt32(txtSimulations.Text), Convert.ToInt32(txtFrom.Text), Convert.ToInt32(txtTo.Text));
-
+                    MessageBox.Show("Please enter only non-negative numbers.");
                 }
             }
             else
             {
                 MessageBox.Show("Please complete all fields.");
             }
+        }
+
+        private void showFrequencyDemand_Click(object sender, EventArgs e)
+        {
+            DemandFrequencyForm form2 = new DemandFrequencyForm();
+
+            int[] quantities = {Convert.ToInt32(txtDemand1.Text),
+            Convert.ToInt32(txtDemand2.Text),
+            Convert.ToInt32(txtDemand3.Text),
+            Convert.ToInt32(txtDemand4.Text),
+            Convert.ToInt32(txtDemand5.Text),
+            Convert.ToInt32(txtDemand6.Text)};
+
+            double[] frequencies = {Convert.ToDouble(txtFrequency1.Text),
+            Convert.ToDouble(txtFrequency2.Text),
+            Convert.ToDouble(txtFrequency3.Text),
+            Convert.ToDouble(txtFrequency4.Text),
+            Convert.ToDouble(txtFrequency5.Text),
+            Convert.ToDouble(txtFrequency6.Text)};
+
+            double sumFrequency = 0;
+
+            for (int i = 0; i < quantities.Length; i++)
+            {
+                sumFrequency += frequencies[i];
+
+                string interval;
+                if (i == 0)
+                {
+                    interval = $"0.00 - {(sumFrequency - 0.01):F2}";
+                }
+                else
+                {
+                    interval = $"{(sumFrequency - frequencies[i]):F2} - {(sumFrequency - 0.01):F2}";
+                }
+
+                form2.addRow(quantities[i], frequencies[i], sumFrequency, interval);
+            }
+
+            form2.TopMost = true;
+            form2.Show();
+            showFrequencyDemand.Enabled = false;
+        }
+
+        private void showFrequencyOrder_Click(object sender, EventArgs e)
+        {
+            showFrequencyDemand_Click(sender, e);
+
+            OrderFrequencyForm form2 = new OrderFrequencyForm();
+
+            int[] quantities = {Convert.ToInt32(txtOrder1.Text),
+            Convert.ToInt32(txtOrder2.Text),
+            Convert.ToInt32(txtOrder3.Text),
+            Convert.ToInt32(txtOrder4.Text) };
+
+            double[] frequencies = {Convert.ToDouble(txtFrequencyP21.Text),
+            Convert.ToDouble(txtFrequencyP22.Text),
+            Convert.ToDouble(txtFrequencyP23.Text),
+            Convert.ToDouble(txtFrequencyP24.Text) };
+
+            double sumFrequency = 0;
+
+            for (int i = 0; i < quantities.Length; i++)
+            {
+                sumFrequency += frequencies[i];
+
+                string interval;
+                if (i == 0)
+                {
+                    interval = $"0.00 - {(sumFrequency - 0.01):F2}";
+                }
+                else
+                {
+                    interval = $"{(sumFrequency - frequencies[i]):F2} - {(sumFrequency - 0.01):F2}";
+                }
+
+                form2.addRow(quantities[i], frequencies[i], sumFrequency, interval);
+            }
+
+            form2.TopMost = true;
+            form2.Show();
+            showFrequencyOrder.Enabled = false;
         }
     }
 }

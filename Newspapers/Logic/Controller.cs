@@ -21,6 +21,8 @@ namespace Newspapers.Logic
 
         public Random rndDemand = new Random();
         public Random rndOrder = new Random();
+        private static List<double> rndDemandList = new List<double>();
+        private static List<double> rndDemandListP2 = new List<double>();
 
         public double cost = 0.8;
         public double repayment = 0.20;
@@ -97,7 +99,14 @@ namespace Newspapers.Logic
             {
                 rowCurrent.day++;
 
-                calculateDemand();
+                if (rndDemandListP2.Count == 0)
+                {
+                    calculateDemand();
+                }
+                else
+                {
+                    calculateDemand(rndDemandListP2[i]);
+                }
 
                 calculateOrder();
 
@@ -127,6 +136,36 @@ namespace Newspapers.Logic
             {
                 control.showRow(rowCurrent);
             }
+
+            rndDemandListP2.Clear();
+
+        }
+
+        private void calculateDemand(double rnd)
+        {
+            rowCurrent.rndDemand = rnd;
+
+            if (rowCurrent.rndDemand < frequency1)
+            {
+                rowCurrent.demand = demand1;
+            }
+            else if (rowCurrent.rndDemand < frequency1 + frequency2)
+            {
+                rowCurrent.demand = demand2;
+            }
+            else if (rowCurrent.rndDemand < frequency1 + frequency2 + frequency3)
+            {
+                rowCurrent.demand = demand3;
+            }
+            else if (rowCurrent.rndDemand < frequency1 + frequency2 + frequency3 + frequency4)
+            {
+                rowCurrent.demand = demand4;
+            }
+            else if (rowCurrent.rndDemand < frequency1 + frequency2 + frequency3 + frequency4 + frequency5)
+            {
+                rowCurrent.demand = demand5;
+            }
+            else { rowCurrent.demand = demand6; }
         }
 
         private void calculateOrder()
@@ -137,6 +176,7 @@ namespace Newspapers.Logic
         private void calculateDemand()
         {
             rowCurrent.rndDemand = double.Parse(rndDemand.NextDouble().ToString("F2"));
+            rndDemandList.Add(rowCurrent.rndDemand);
 
             if (rowCurrent.rndDemand <  frequency1)
             {
@@ -200,7 +240,14 @@ namespace Newspapers.Logic
             {
                 rowCurrentP2.dayP2++;
 
-                calculateDemandP2();
+                if (rndDemandList.Count == 0)
+                {
+                    calculateDemandP2();
+                }
+                else
+                {
+                    calculateDemandP2(rndDemandList[i]);
+                }
 
                 calculateOrderP2();
 
@@ -229,6 +276,35 @@ namespace Newspapers.Logic
                 control.showRowP2(rowCurrentP2);
             }
 
+            rndDemandList.Clear();
+
+        }
+
+        private void calculateDemandP2(double rnd)
+        {
+            rowCurrentP2.rndDemandP2 = rnd;
+
+            if (rowCurrentP2.rndDemandP2 < frequency1)
+            {
+                rowCurrentP2.demandP2 = demand1;
+            }
+            else if (rowCurrentP2.rndDemandP2 < frequency1 + frequency2)
+            {
+                rowCurrentP2.demandP2 = demand2;
+            }
+            else if (rowCurrentP2.rndDemandP2 < frequency1 + frequency2 + frequency3)
+            {
+                rowCurrentP2.demandP2 = demand3;
+            }
+            else if (rowCurrentP2.rndDemandP2 < frequency1 + frequency2 + frequency3 + frequency4)
+            {
+                rowCurrentP2.demandP2 = demand4;
+            }
+            else if (rowCurrentP2.rndDemandP2 < frequency1 + frequency2 + frequency3 + frequency4 + frequency5)
+            {
+                rowCurrentP2.demandP2 = demand5;
+            }
+            else { rowCurrentP2.demandP2 = demand6; }
         }
 
         private void calculateOrderP2()
@@ -253,6 +329,7 @@ namespace Newspapers.Logic
         private void calculateDemandP2()
         {
             rowCurrentP2.rndDemandP2 = double.Parse(rndDemand.NextDouble().ToString("F2"));
+            rndDemandListP2.Add(rowCurrentP2.rndDemandP2);
 
             if (rowCurrentP2.rndDemandP2 < frequency1)
             {

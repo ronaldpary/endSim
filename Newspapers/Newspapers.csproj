@@ -56,11 +56,23 @@
     <Compile Include="Logic\Parameters.cs" />
     <Compile Include="Logic\Row.cs" />
     <Compile Include="Logic\RowP2.cs" />
+    <Compile Include="Presentation\DemandFrequencyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\DemandFrequencyForm.Designer.cs">
+      <DependentUpon>DemandFrequencyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\InterfaceNewsPapers.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentation\InterfaceNewsPapers.Designer.cs">
       <DependentUpon>InterfaceNewsPapers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\OrderFrequencyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\OrderFrequencyForm.Designer.cs">
+      <DependentUpon>OrderFrequencyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\UserControlN1.cs">
       <SubType>UserControl</SubType>
@@ -70,8 +82,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation\DemandFrequencyForm.resx">
+      <DependentUpon>DemandFrequencyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\InterfaceNewsPapers.resx">
       <DependentUpon>InterfaceNewsPapers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\OrderFrequencyForm.resx">
+      <DependentUpon>OrderFrequencyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\UserControlN1.resx">
       <DependentUpon>UserControlN1.cs</DependentUpon>

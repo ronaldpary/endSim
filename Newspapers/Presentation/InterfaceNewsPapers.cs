@@ -31,5 +31,10 @@ namespace Newspapers
         private void guna2Button2_Click(object sender, EventArgs e)
         {
         }
+
+        private void userControlN11_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

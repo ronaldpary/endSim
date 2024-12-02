@@ -53,6 +53,7 @@
             this.userControlN11.Name = "userControlN11";
             this.userControlN11.Size = new System.Drawing.Size(1403, 702);
             this.userControlN11.TabIndex = 0;
+            this.userControlN11.Load += new System.EventHandler(this.userControlN11_Load);
             // 
             // InterfaceNewsPapers
             // 

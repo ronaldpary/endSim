@@ -29,17 +29,22 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtPreviousLostSales = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPreviousDemand = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtLostCost = new Guna.UI2.WinForms.Guna2TextBox();
@@ -84,8 +89,23 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvEvents = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dgvEventsP2 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dayP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rndDemandP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.demandP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rndOrderP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leftoverNewspaperP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.repaymentP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lostSalesP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lostSalesCostP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dailyNetCostP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sumDailyNetCostP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dailyAveregeCostP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.showFrequencyOrder = new Guna.UI2.WinForms.Guna2Button();
             this.btnComenzarP2 = new Guna.UI2.WinForms.Guna2Button();
+            this.showFrequencyDemand = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -102,19 +122,6 @@
             this.dailyNetCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sumDailyNetCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dailyAveregeCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dayP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rndDemandP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.demandP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rndOrderP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.leftoverNewspaperP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.repaymentP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lostSalesP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lostSalesCostP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dailyNetCostP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sumDailyNetCostP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dailyAveregeCostP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEventsP2)).BeginInit();
@@ -134,7 +141,7 @@
             this.txtPreviousLostSales.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPreviousLostSales.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtPreviousLostSales.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPreviousLostSales.Location = new System.Drawing.Point(182, 313);
+            this.txtPreviousLostSales.Location = new System.Drawing.Point(182, 295);
             this.txtPreviousLostSales.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtPreviousLostSales.Name = "txtPreviousLostSales";
             this.txtPreviousLostSales.PasswordChar = '\0';
@@ -155,7 +162,7 @@
             this.txtPreviousDemand.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPreviousDemand.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtPreviousDemand.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPreviousDemand.Location = new System.Drawing.Point(182, 280);
+            this.txtPreviousDemand.Location = new System.Drawing.Point(182, 262);
             this.txtPreviousDemand.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtPreviousDemand.Name = "txtPreviousDemand";
             this.txtPreviousDemand.PasswordChar = '\0';
@@ -176,7 +183,7 @@
             this.txtLostCost.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLostCost.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtLostCost.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLostCost.Location = new System.Drawing.Point(182, 247);
+            this.txtLostCost.Location = new System.Drawing.Point(182, 229);
             this.txtLostCost.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtLostCost.Name = "txtLostCost";
             this.txtLostCost.PasswordChar = '\0';
@@ -197,7 +204,7 @@
             this.txtRepayment.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRepayment.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtRepayment.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRepayment.Location = new System.Drawing.Point(182, 214);
+            this.txtRepayment.Location = new System.Drawing.Point(182, 196);
             this.txtRepayment.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtRepayment.Name = "txtRepayment";
             this.txtRepayment.PasswordChar = '\0';
@@ -211,7 +218,7 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(20, 362);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(20, 343);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(65, 18);
             this.guna2HtmlLabel4.TabIndex = 6;
@@ -230,7 +237,7 @@
             this.txtPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPrice.Location = new System.Drawing.Point(182, 181);
+            this.txtPrice.Location = new System.Drawing.Point(182, 163);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PasswordChar = '\0';
@@ -244,7 +251,7 @@
             this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel12.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel12.Location = new System.Drawing.Point(36, 313);
+            this.guna2HtmlLabel12.Location = new System.Drawing.Point(36, 295);
             this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
             this.guna2HtmlLabel12.Size = new System.Drawing.Size(139, 18);
             this.guna2HtmlLabel12.TabIndex = 76;
@@ -262,7 +269,7 @@
             this.txtDemand1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDemand1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtDemand1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDemand1.Location = new System.Drawing.Point(4, 389);
+            this.txtDemand1.Location = new System.Drawing.Point(4, 370);
             this.txtDemand1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtDemand1.Name = "txtDemand1";
             this.txtDemand1.PasswordChar = '\0';
@@ -276,7 +283,7 @@
             this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel11.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(47, 280);
+            this.guna2HtmlLabel11.Location = new System.Drawing.Point(47, 262);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
             this.guna2HtmlLabel11.Size = new System.Drawing.Size(128, 18);
             this.guna2HtmlLabel11.TabIndex = 75;
@@ -294,7 +301,7 @@
             this.txtFrequencyP24.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFrequencyP24.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtFrequencyP24.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFrequencyP24.Location = new System.Drawing.Point(232, 585);
+            this.txtFrequencyP24.Location = new System.Drawing.Point(232, 574);
             this.txtFrequencyP24.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtFrequencyP24.Name = "txtFrequencyP24";
             this.txtFrequencyP24.PasswordChar = '\0';
@@ -308,7 +315,7 @@
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(66, 247);
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(66, 229);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             this.guna2HtmlLabel10.Size = new System.Drawing.Size(109, 18);
             this.guna2HtmlLabel10.TabIndex = 74;
@@ -326,7 +333,7 @@
             this.txtFrequencyP23.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFrequencyP23.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtFrequencyP23.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFrequencyP23.Location = new System.Drawing.Point(167, 585);
+            this.txtFrequencyP23.Location = new System.Drawing.Point(167, 574);
             this.txtFrequencyP23.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtFrequencyP23.Name = "txtFrequencyP23";
             this.txtFrequencyP23.PasswordChar = '\0';
@@ -340,7 +347,7 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(5, 419);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(3, 400);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(80, 18);
             this.guna2HtmlLabel5.TabIndex = 6;
@@ -359,7 +366,7 @@
             this.txtFrequencyP22.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFrequencyP22.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtFrequencyP22.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFrequencyP22.Location = new System.Drawing.Point(108, 585);
+            this.txtFrequencyP22.Location = new System.Drawing.Point(108, 574);
             this.txtFrequencyP22.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtFrequencyP22.Name = "txtFrequencyP22";
             this.txtFrequencyP22.PasswordChar = '\0';
@@ -373,7 +380,7 @@
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(89, 214);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(89, 196);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(86, 18);
             this.guna2HtmlLabel9.TabIndex = 73;
@@ -391,7 +398,7 @@
             this.txtFrequencyP21.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFrequencyP21.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtFrequencyP21.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFrequencyP21.Location = new System.Drawing.Point(46, 585);
+            this.txtFrequencyP21.Location = new System.Drawing.Point(46, 574);
             this.txtFrequencyP21.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtFrequencyP21.Name = "txtFrequencyP21";
             this.txtFrequencyP21.PasswordChar = '\0';
@@ -405,7 +412,7 @@
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(39, 501);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(39, 490);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(46, 18);
             this.guna2HtmlLabel8.TabIndex = 58;
@@ -416,7 +423,7 @@
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(5, 558);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(5, 547);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(80, 18);
             this.guna2HtmlLabel6.TabIndex = 59;
@@ -427,7 +434,7 @@
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(132, 181);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(132, 163);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(43, 18);
             this.guna2HtmlLabel7.TabIndex = 72;
@@ -445,7 +452,7 @@
             this.txtOrder4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOrder4.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtOrder4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOrder4.Location = new System.Drawing.Point(232, 528);
+            this.txtOrder4.Location = new System.Drawing.Point(232, 517);
             this.txtOrder4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtOrder4.Name = "txtOrder4";
             this.txtOrder4.PasswordChar = '\0';
@@ -466,7 +473,7 @@
             this.txtDemand2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDemand2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtDemand2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDemand2.Location = new System.Drawing.Point(56, 389);
+            this.txtDemand2.Location = new System.Drawing.Point(56, 370);
             this.txtDemand2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtDemand2.Name = "txtDemand2";
             this.txtDemand2.PasswordChar = '\0';
@@ -487,7 +494,7 @@
             this.txtOrder3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOrder3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtOrder3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOrder3.Location = new System.Drawing.Point(170, 528);
+            this.txtOrder3.Location = new System.Drawing.Point(170, 517);
             this.txtOrder3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtOrder3.Name = "txtOrder3";
             this.txtOrder3.PasswordChar = '\0';
@@ -508,7 +515,7 @@
             this.txtOrder2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOrder2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtOrder2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOrder2.Location = new System.Drawing.Point(108, 528);
+            this.txtOrder2.Location = new System.Drawing.Point(108, 517);
             this.txtOrder2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtOrder2.Name = "txtOrder2";
             this.txtOrder2.PasswordChar = '\0';
@@ -529,7 +536,7 @@
             this.txtFrequency6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFrequency6.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtFrequency6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFrequency6.Location = new System.Drawing.Point(264, 446);
+            this.txtFrequency6.Location = new System.Drawing.Point(264, 427);
             this.txtFrequency6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtFrequency6.Name = "txtFrequency6";
             this.txtFrequency6.PasswordChar = '\0';
@@ -550,7 +557,7 @@
             this.txtOrder1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOrder1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtOrder1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOrder1.Location = new System.Drawing.Point(46, 528);
+            this.txtOrder1.Location = new System.Drawing.Point(46, 517);
             this.txtOrder1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtOrder1.Name = "txtOrder1";
             this.txtOrder1.PasswordChar = '\0';
@@ -571,7 +578,7 @@
             this.txtDemand3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDemand3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtDemand3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDemand3.Location = new System.Drawing.Point(108, 389);
+            this.txtDemand3.Location = new System.Drawing.Point(108, 370);
             this.txtDemand3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtDemand3.Name = "txtDemand3";
             this.txtDemand3.PasswordChar = '\0';
@@ -593,7 +600,7 @@
             this.txtFrequency5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFrequency5.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtFrequency5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFrequency5.Location = new System.Drawing.Point(212, 446);
+            this.txtFrequency5.Location = new System.Drawing.Point(212, 427);
             this.txtFrequency5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtFrequency5.Name = "txtFrequency5";
             this.txtFrequency5.PasswordChar = '\0';
@@ -614,7 +621,7 @@
             this.txtDemand4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDemand4.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtDemand4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDemand4.Location = new System.Drawing.Point(160, 389);
+            this.txtDemand4.Location = new System.Drawing.Point(160, 370);
             this.txtDemand4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtDemand4.Name = "txtDemand4";
             this.txtDemand4.PasswordChar = '\0';
@@ -635,7 +642,7 @@
             this.txtFrequency4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFrequency4.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtFrequency4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFrequency4.Location = new System.Drawing.Point(160, 446);
+            this.txtFrequency4.Location = new System.Drawing.Point(160, 427);
             this.txtFrequency4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtFrequency4.Name = "txtFrequency4";
             this.txtFrequency4.PasswordChar = '\0';
@@ -656,7 +663,7 @@
             this.txtDemand5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDemand5.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtDemand5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDemand5.Location = new System.Drawing.Point(212, 389);
+            this.txtDemand5.Location = new System.Drawing.Point(212, 370);
             this.txtDemand5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtDemand5.Name = "txtDemand5";
             this.txtDemand5.PasswordChar = '\0';
@@ -677,7 +684,7 @@
             this.txtFrequency3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFrequency3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtFrequency3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFrequency3.Location = new System.Drawing.Point(108, 446);
+            this.txtFrequency3.Location = new System.Drawing.Point(108, 427);
             this.txtFrequency3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtFrequency3.Name = "txtFrequency3";
             this.txtFrequency3.PasswordChar = '\0';
@@ -698,7 +705,7 @@
             this.txtDemand6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDemand6.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtDemand6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDemand6.Location = new System.Drawing.Point(264, 389);
+            this.txtDemand6.Location = new System.Drawing.Point(264, 370);
             this.txtDemand6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtDemand6.Name = "txtDemand6";
             this.txtDemand6.PasswordChar = '\0';
@@ -720,7 +727,7 @@
             this.txtFrequency2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFrequency2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtFrequency2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFrequency2.Location = new System.Drawing.Point(56, 446);
+            this.txtFrequency2.Location = new System.Drawing.Point(56, 427);
             this.txtFrequency2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtFrequency2.Name = "txtFrequency2";
             this.txtFrequency2.PasswordChar = '\0';
@@ -741,7 +748,7 @@
             this.txtFrequency1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFrequency1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtFrequency1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFrequency1.Location = new System.Drawing.Point(4, 446);
+            this.txtFrequency1.Location = new System.Drawing.Point(4, 427);
             this.txtFrequency1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtFrequency1.Name = "txtFrequency1";
             this.txtFrequency1.PasswordChar = '\0';
@@ -797,7 +804,7 @@
             this.btnComenzar.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComenzar.ForeColor = System.Drawing.Color.Black;
             this.btnComenzar.IndicateFocus = true;
-            this.btnComenzar.Location = new System.Drawing.Point(82, 632);
+            this.btnComenzar.Location = new System.Drawing.Point(66, 656);
             this.btnComenzar.Name = "btnComenzar";
             this.btnComenzar.Size = new System.Drawing.Size(77, 29);
             this.btnComenzar.TabIndex = 11;
@@ -886,14 +893,16 @@
             this.dgvEvents.AllowUserToDeleteRows = false;
             this.dgvEvents.AllowUserToResizeColumns = false;
             this.dgvEvents.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEvents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvEvents.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEvents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEvents.ColumnHeadersHeight = 41;
             this.dgvEvents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvEvents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -909,14 +918,14 @@
             this.dailyNetCost,
             this.sumDailyNetCost,
             this.dailyAveregeCost});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEvents.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEvents.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvEvents.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEvents.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvEvents.Location = new System.Drawing.Point(0, 0);
@@ -954,14 +963,16 @@
             this.dgvEventsP2.AllowUserToDeleteRows = false;
             this.dgvEventsP2.AllowUserToResizeColumns = false;
             this.dgvEventsP2.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEventsP2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            this.dgvEventsP2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEventsP2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvEventsP2.ColumnHeadersHeight = 41;
             this.dgvEventsP2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvEventsP2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -978,14 +989,14 @@
             this.dailyNetCostP2,
             this.sumDailyNetCostP2,
             this.dailyAveregeCostP2});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEventsP2.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEventsP2.DefaultCellStyle = dataGridViewCellStyle17;
             this.dgvEventsP2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEventsP2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvEventsP2.Location = new System.Drawing.Point(0, 0);
@@ -1018,12 +1029,103 @@
             this.dgvEventsP2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvEventsP2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
             // 
+            // dayP2
+            // 
+            this.dayP2.HeaderText = "Day";
+            this.dayP2.Name = "dayP2";
+            this.dayP2.ReadOnly = true;
+            // 
+            // rndDemandP2
+            // 
+            this.rndDemandP2.HeaderText = "rnd Demand";
+            this.rndDemandP2.Name = "rndDemandP2";
+            this.rndDemandP2.ReadOnly = true;
+            // 
+            // demandP2
+            // 
+            this.demandP2.HeaderText = "Demand";
+            this.demandP2.Name = "demandP2";
+            this.demandP2.ReadOnly = true;
+            // 
+            // rndOrderP2
+            // 
+            this.rndOrderP2.HeaderText = "rnd Order";
+            this.rndOrderP2.Name = "rndOrderP2";
+            this.rndOrderP2.ReadOnly = true;
+            // 
+            // orderP2
+            // 
+            this.orderP2.HeaderText = "Order";
+            this.orderP2.Name = "orderP2";
+            this.orderP2.ReadOnly = true;
+            // 
+            // costP2
+            // 
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.costP2.DefaultCellStyle = dataGridViewCellStyle13;
+            this.costP2.HeaderText = "Cost";
+            this.costP2.Name = "costP2";
+            this.costP2.ReadOnly = true;
+            // 
+            // leftoverNewspaperP2
+            // 
+            this.leftoverNewspaperP2.HeaderText = "Leftover Newspaper";
+            this.leftoverNewspaperP2.Name = "leftoverNewspaperP2";
+            this.leftoverNewspaperP2.ReadOnly = true;
+            // 
+            // repaymentP2
+            // 
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.repaymentP2.DefaultCellStyle = dataGridViewCellStyle14;
+            this.repaymentP2.HeaderText = "Repayment";
+            this.repaymentP2.Name = "repaymentP2";
+            this.repaymentP2.ReadOnly = true;
+            // 
+            // lostSalesP2
+            // 
+            this.lostSalesP2.HeaderText = "Lost Sales";
+            this.lostSalesP2.Name = "lostSalesP2";
+            this.lostSalesP2.ReadOnly = true;
+            // 
+            // lostSalesCostP2
+            // 
+            this.lostSalesCostP2.HeaderText = "Lost Sales Cost";
+            this.lostSalesCostP2.Name = "lostSalesCostP2";
+            this.lostSalesCostP2.ReadOnly = true;
+            // 
+            // dailyNetCostP2
+            // 
+            this.dailyNetCostP2.HeaderText = "Daily Net Cost";
+            this.dailyNetCostP2.Name = "dailyNetCostP2";
+            this.dailyNetCostP2.ReadOnly = true;
+            // 
+            // sumDailyNetCostP2
+            // 
+            dataGridViewCellStyle15.Format = "N2";
+            dataGridViewCellStyle15.NullValue = null;
+            this.sumDailyNetCostP2.DefaultCellStyle = dataGridViewCellStyle15;
+            this.sumDailyNetCostP2.HeaderText = "Accumulator DNC";
+            this.sumDailyNetCostP2.Name = "sumDailyNetCostP2";
+            this.sumDailyNetCostP2.ReadOnly = true;
+            // 
+            // dailyAveregeCostP2
+            // 
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle16.Format = "N4";
+            dataGridViewCellStyle16.NullValue = null;
+            this.dailyAveregeCostP2.DefaultCellStyle = dataGridViewCellStyle16;
+            this.dailyAveregeCostP2.HeaderText = "Daily Averege Cost";
+            this.dailyAveregeCostP2.Name = "dailyAveregeCostP2";
+            this.dailyAveregeCostP2.ReadOnly = true;
+            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.guna2Panel2.Controls.Add(this.showFrequencyOrder);
             this.guna2Panel2.Controls.Add(this.btnComenzarP2);
+            this.guna2Panel2.Controls.Add(this.showFrequencyDemand);
             this.guna2Panel2.Controls.Add(this.txtFrequencyP24);
             this.guna2Panel2.Controls.Add(this.txtDemand1);
             this.guna2Panel2.Controls.Add(this.btnComenzar);
@@ -1071,6 +1173,30 @@
             this.guna2Panel2.Size = new System.Drawing.Size(313, 700);
             this.guna2Panel2.TabIndex = 18;
             // 
+            // showFrequencyOrder
+            // 
+            this.showFrequencyOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.showFrequencyOrder.Animated = true;
+            this.showFrequencyOrder.AutoRoundedCorners = true;
+            this.showFrequencyOrder.BackColor = System.Drawing.Color.Transparent;
+            this.showFrequencyOrder.BorderRadius = 13;
+            this.showFrequencyOrder.DefaultAutoSize = true;
+            this.showFrequencyOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.showFrequencyOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.showFrequencyOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.showFrequencyOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.showFrequencyOrder.Enabled = false;
+            this.showFrequencyOrder.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showFrequencyOrder.ForeColor = System.Drawing.Color.Black;
+            this.showFrequencyOrder.IndicateFocus = true;
+            this.showFrequencyOrder.Location = new System.Drawing.Point(230, 604);
+            this.showFrequencyOrder.Name = "showFrequencyOrder";
+            this.showFrequencyOrder.Size = new System.Drawing.Size(78, 29);
+            this.showFrequencyOrder.TabIndex = 21;
+            this.showFrequencyOrder.Text = "Show F.";
+            this.showFrequencyOrder.UseTransparentBackground = true;
+            this.showFrequencyOrder.Click += new System.EventHandler(this.showFrequencyOrder_Click);
+            // 
             // btnComenzarP2
             // 
             this.btnComenzarP2.Animated = true;
@@ -1085,13 +1211,37 @@
             this.btnComenzarP2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComenzarP2.ForeColor = System.Drawing.Color.Black;
             this.btnComenzarP2.IndicateFocus = true;
-            this.btnComenzarP2.Location = new System.Drawing.Point(165, 632);
+            this.btnComenzarP2.Location = new System.Drawing.Point(160, 656);
             this.btnComenzarP2.Name = "btnComenzarP2";
             this.btnComenzarP2.Size = new System.Drawing.Size(79, 29);
             this.btnComenzarP2.TabIndex = 82;
             this.btnComenzarP2.Text = "Start P2";
             this.btnComenzarP2.UseTransparentBackground = true;
             this.btnComenzarP2.Click += new System.EventHandler(this.btnComenzar2_Click);
+            // 
+            // showFrequencyDemand
+            // 
+            this.showFrequencyDemand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.showFrequencyDemand.Animated = true;
+            this.showFrequencyDemand.AutoRoundedCorners = true;
+            this.showFrequencyDemand.BackColor = System.Drawing.Color.Transparent;
+            this.showFrequencyDemand.BorderRadius = 13;
+            this.showFrequencyDemand.DefaultAutoSize = true;
+            this.showFrequencyDemand.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.showFrequencyDemand.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.showFrequencyDemand.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.showFrequencyDemand.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.showFrequencyDemand.Enabled = false;
+            this.showFrequencyDemand.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showFrequencyDemand.ForeColor = System.Drawing.Color.Black;
+            this.showFrequencyDemand.IndicateFocus = true;
+            this.showFrequencyDemand.Location = new System.Drawing.Point(230, 457);
+            this.showFrequencyDemand.Name = "showFrequencyDemand";
+            this.showFrequencyDemand.Size = new System.Drawing.Size(78, 29);
+            this.showFrequencyDemand.TabIndex = 12;
+            this.showFrequencyDemand.Text = "Show F.";
+            this.showFrequencyDemand.UseTransparentBackground = true;
+            this.showFrequencyDemand.Click += new System.EventHandler(this.showFrequencyDemand_Click);
             // 
             // guna2TextBox1
             // 
@@ -1169,42 +1319,48 @@
             // 
             // order
             // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.order.DefaultCellStyle = dataGridViewCellStyle3;
             this.order.HeaderText = "Order";
             this.order.Name = "order";
             this.order.ReadOnly = true;
             // 
             // cost
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.cost.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.cost.DefaultCellStyle = dataGridViewCellStyle4;
             this.cost.HeaderText = "Cost";
             this.cost.Name = "cost";
             this.cost.ReadOnly = true;
             // 
             // leftoverNewspaper
             // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.leftoverNewspaper.DefaultCellStyle = dataGridViewCellStyle5;
             this.leftoverNewspaper.HeaderText = "Leftover Newspaper";
             this.leftoverNewspaper.Name = "leftoverNewspaper";
             this.leftoverNewspaper.ReadOnly = true;
             // 
             // repayment
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.repayment.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.repayment.DefaultCellStyle = dataGridViewCellStyle6;
             this.repayment.HeaderText = "Repayment";
             this.repayment.Name = "repayment";
             this.repayment.ReadOnly = true;
             // 
             // lostSales
             // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lostSales.DefaultCellStyle = dataGridViewCellStyle7;
             this.lostSales.HeaderText = "Lost Sales";
             this.lostSales.Name = "lostSales";
             this.lostSales.ReadOnly = true;
             // 
             // lostSalesCost
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.lostSalesCost.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lostSalesCost.DefaultCellStyle = dataGridViewCellStyle8;
             this.lostSalesCost.HeaderText = "Lost Sales Cost";
             this.lostSalesCost.Name = "lostSalesCost";
             this.lostSalesCost.ReadOnly = true;
@@ -1223,101 +1379,13 @@
             // 
             // dailyAveregeCost
             // 
-            dataGridViewCellStyle5.Format = "N4";
-            dataGridViewCellStyle5.NullValue = null;
-            this.dailyAveregeCost.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle9.Format = "N4";
+            dataGridViewCellStyle9.NullValue = null;
+            this.dailyAveregeCost.DefaultCellStyle = dataGridViewCellStyle9;
             this.dailyAveregeCost.HeaderText = "Daily Averege Cost";
             this.dailyAveregeCost.Name = "dailyAveregeCost";
             this.dailyAveregeCost.ReadOnly = true;
-            // 
-            // dayP2
-            // 
-            this.dayP2.HeaderText = "Day";
-            this.dayP2.Name = "dayP2";
-            this.dayP2.ReadOnly = true;
-            // 
-            // rndDemandP2
-            // 
-            this.rndDemandP2.HeaderText = "rnd Demand";
-            this.rndDemandP2.Name = "rndDemandP2";
-            this.rndDemandP2.ReadOnly = true;
-            // 
-            // demandP2
-            // 
-            this.demandP2.HeaderText = "Demand";
-            this.demandP2.Name = "demandP2";
-            this.demandP2.ReadOnly = true;
-            // 
-            // rndOrderP2
-            // 
-            this.rndOrderP2.HeaderText = "rnd Order";
-            this.rndOrderP2.Name = "rndOrderP2";
-            this.rndOrderP2.ReadOnly = true;
-            // 
-            // orderP2
-            // 
-            this.orderP2.HeaderText = "Order";
-            this.orderP2.Name = "orderP2";
-            this.orderP2.ReadOnly = true;
-            // 
-            // costP2
-            // 
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.costP2.DefaultCellStyle = dataGridViewCellStyle8;
-            this.costP2.HeaderText = "Cost";
-            this.costP2.Name = "costP2";
-            this.costP2.ReadOnly = true;
-            // 
-            // leftoverNewspaperP2
-            // 
-            this.leftoverNewspaperP2.HeaderText = "Leftover Newspaper";
-            this.leftoverNewspaperP2.Name = "leftoverNewspaperP2";
-            this.leftoverNewspaperP2.ReadOnly = true;
-            // 
-            // repaymentP2
-            // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.repaymentP2.DefaultCellStyle = dataGridViewCellStyle9;
-            this.repaymentP2.HeaderText = "Repayment";
-            this.repaymentP2.Name = "repaymentP2";
-            this.repaymentP2.ReadOnly = true;
-            // 
-            // lostSalesP2
-            // 
-            this.lostSalesP2.HeaderText = "Lost Sales";
-            this.lostSalesP2.Name = "lostSalesP2";
-            this.lostSalesP2.ReadOnly = true;
-            // 
-            // lostSalesCostP2
-            // 
-            this.lostSalesCostP2.HeaderText = "Lost Sales Cost";
-            this.lostSalesCostP2.Name = "lostSalesCostP2";
-            this.lostSalesCostP2.ReadOnly = true;
-            // 
-            // dailyNetCostP2
-            // 
-            this.dailyNetCostP2.HeaderText = "Daily Net Cost";
-            this.dailyNetCostP2.Name = "dailyNetCostP2";
-            this.dailyNetCostP2.ReadOnly = true;
-            // 
-            // sumDailyNetCostP2
-            // 
-            dataGridViewCellStyle10.Format = "N2";
-            dataGridViewCellStyle10.NullValue = null;
-            this.sumDailyNetCostP2.DefaultCellStyle = dataGridViewCellStyle10;
-            this.sumDailyNetCostP2.HeaderText = "Accumulator DNC";
-            this.sumDailyNetCostP2.Name = "sumDailyNetCostP2";
-            this.sumDailyNetCostP2.ReadOnly = true;
-            // 
-            // dailyAveregeCostP2
-            // 
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle11.Format = "N4";
-            dataGridViewCellStyle11.NullValue = null;
-            this.dailyAveregeCostP2.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dailyAveregeCostP2.HeaderText = "Daily Averege Cost";
-            this.dailyAveregeCostP2.Name = "dailyAveregeCostP2";
-            this.dailyAveregeCostP2.ReadOnly = true;
             // 
             // UserControlN1
             // 
@@ -1392,18 +1460,6 @@
         private Guna.UI2.WinForms.Guna2Button btnComenzarP2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn day;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rndDemand;
-        private System.Windows.Forms.DataGridViewTextBoxColumn demand;
-        private System.Windows.Forms.DataGridViewTextBoxColumn order;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn leftoverNewspaper;
-        private System.Windows.Forms.DataGridViewTextBoxColumn repayment;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lostSales;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lostSalesCost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dailyNetCost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sumDailyNetCost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dailyAveregeCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn dayP2;
         private System.Windows.Forms.DataGridViewTextBoxColumn rndDemandP2;
         private System.Windows.Forms.DataGridViewTextBoxColumn demandP2;
@@ -1417,5 +1473,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dailyNetCostP2;
         private System.Windows.Forms.DataGridViewTextBoxColumn sumDailyNetCostP2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dailyAveregeCostP2;
+        private Guna.UI2.WinForms.Guna2Button showFrequencyDemand;
+        private Guna.UI2.WinForms.Guna2Button showFrequencyOrder;
+        private System.Windows.Forms.DataGridViewTextBoxColumn day;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rndDemand;
+        private System.Windows.Forms.DataGridViewTextBoxColumn demand;
+        private System.Windows.Forms.DataGridViewTextBoxColumn order;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn leftoverNewspaper;
+        private System.Windows.Forms.DataGridViewTextBoxColumn repayment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lostSales;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lostSalesCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dailyNetCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sumDailyNetCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dailyAveregeCost;
     }
 }
