@@ -31,13 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -45,6 +38,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtPreviousLostSales = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPreviousDemand = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtLostCost = new Guna.UI2.WinForms.Guna2TextBox();
@@ -88,6 +88,18 @@
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvEvents = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.day = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rndDemand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.demand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.order = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leftoverNewspaper = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.repayment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lostSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lostSalesCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dailyNetCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sumDailyNetCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dailyAveregeCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvEventsP2 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dayP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rndDemandP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -110,18 +122,7 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.day = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rndDemand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.demand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.order = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.leftoverNewspaper = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.repayment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lostSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lostSalesCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dailyNetCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sumDailyNetCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dailyAveregeCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBoxRnd = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEventsP2)).BeginInit();
@@ -957,6 +958,94 @@
             this.dgvEvents.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvEvents.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // day
+            // 
+            this.day.HeaderText = "Day";
+            this.day.Name = "day";
+            this.day.ReadOnly = true;
+            // 
+            // rndDemand
+            // 
+            this.rndDemand.HeaderText = "rnd Demand";
+            this.rndDemand.Name = "rndDemand";
+            this.rndDemand.ReadOnly = true;
+            // 
+            // demand
+            // 
+            this.demand.HeaderText = "Demand";
+            this.demand.Name = "demand";
+            this.demand.ReadOnly = true;
+            // 
+            // order
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.order.DefaultCellStyle = dataGridViewCellStyle3;
+            this.order.HeaderText = "Order";
+            this.order.Name = "order";
+            this.order.ReadOnly = true;
+            // 
+            // cost
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.cost.DefaultCellStyle = dataGridViewCellStyle4;
+            this.cost.HeaderText = "Cost";
+            this.cost.Name = "cost";
+            this.cost.ReadOnly = true;
+            // 
+            // leftoverNewspaper
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.leftoverNewspaper.DefaultCellStyle = dataGridViewCellStyle5;
+            this.leftoverNewspaper.HeaderText = "Leftover Newspaper";
+            this.leftoverNewspaper.Name = "leftoverNewspaper";
+            this.leftoverNewspaper.ReadOnly = true;
+            // 
+            // repayment
+            // 
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.repayment.DefaultCellStyle = dataGridViewCellStyle6;
+            this.repayment.HeaderText = "Repayment";
+            this.repayment.Name = "repayment";
+            this.repayment.ReadOnly = true;
+            // 
+            // lostSales
+            // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lostSales.DefaultCellStyle = dataGridViewCellStyle7;
+            this.lostSales.HeaderText = "Lost Sales";
+            this.lostSales.Name = "lostSales";
+            this.lostSales.ReadOnly = true;
+            // 
+            // lostSalesCost
+            // 
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lostSalesCost.DefaultCellStyle = dataGridViewCellStyle8;
+            this.lostSalesCost.HeaderText = "Lost Sales Cost";
+            this.lostSalesCost.Name = "lostSalesCost";
+            this.lostSalesCost.ReadOnly = true;
+            // 
+            // dailyNetCost
+            // 
+            this.dailyNetCost.HeaderText = "Daily Net Cost";
+            this.dailyNetCost.Name = "dailyNetCost";
+            this.dailyNetCost.ReadOnly = true;
+            // 
+            // sumDailyNetCost
+            // 
+            this.sumDailyNetCost.HeaderText = "Accumulator DNC";
+            this.sumDailyNetCost.Name = "sumDailyNetCost";
+            this.sumDailyNetCost.ReadOnly = true;
+            // 
+            // dailyAveregeCost
+            // 
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle9.Format = "N4";
+            dataGridViewCellStyle9.NullValue = null;
+            this.dailyAveregeCost.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dailyAveregeCost.HeaderText = "Daily Averege Cost";
+            this.dailyAveregeCost.Name = "dailyAveregeCost";
+            this.dailyAveregeCost.ReadOnly = true;
+            // 
             // dgvEventsP2
             // 
             this.dgvEventsP2.AllowUserToAddRows = false;
@@ -1123,6 +1212,7 @@
             this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.guna2Panel2.Controls.Add(this.comboBoxRnd);
             this.guna2Panel2.Controls.Add(this.showFrequencyOrder);
             this.guna2Panel2.Controls.Add(this.btnComenzarP2);
             this.guna2Panel2.Controls.Add(this.showFrequencyDemand);
@@ -1299,93 +1389,24 @@
             this.guna2HtmlLabel14.TabIndex = 20;
             this.guna2HtmlLabel14.Text = "Policy 2";
             // 
-            // day
+            // comboBoxRnd
             // 
-            this.day.HeaderText = "Day";
-            this.day.Name = "day";
-            this.day.ReadOnly = true;
-            // 
-            // rndDemand
-            // 
-            this.rndDemand.HeaderText = "rnd Demand";
-            this.rndDemand.Name = "rndDemand";
-            this.rndDemand.ReadOnly = true;
-            // 
-            // demand
-            // 
-            this.demand.HeaderText = "Demand";
-            this.demand.Name = "demand";
-            this.demand.ReadOnly = true;
-            // 
-            // order
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.order.DefaultCellStyle = dataGridViewCellStyle3;
-            this.order.HeaderText = "Order";
-            this.order.Name = "order";
-            this.order.ReadOnly = true;
-            // 
-            // cost
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.cost.DefaultCellStyle = dataGridViewCellStyle4;
-            this.cost.HeaderText = "Cost";
-            this.cost.Name = "cost";
-            this.cost.ReadOnly = true;
-            // 
-            // leftoverNewspaper
-            // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.leftoverNewspaper.DefaultCellStyle = dataGridViewCellStyle5;
-            this.leftoverNewspaper.HeaderText = "Leftover Newspaper";
-            this.leftoverNewspaper.Name = "leftoverNewspaper";
-            this.leftoverNewspaper.ReadOnly = true;
-            // 
-            // repayment
-            // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.repayment.DefaultCellStyle = dataGridViewCellStyle6;
-            this.repayment.HeaderText = "Repayment";
-            this.repayment.Name = "repayment";
-            this.repayment.ReadOnly = true;
-            // 
-            // lostSales
-            // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.lostSales.DefaultCellStyle = dataGridViewCellStyle7;
-            this.lostSales.HeaderText = "Lost Sales";
-            this.lostSales.Name = "lostSales";
-            this.lostSales.ReadOnly = true;
-            // 
-            // lostSalesCost
-            // 
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lostSalesCost.DefaultCellStyle = dataGridViewCellStyle8;
-            this.lostSalesCost.HeaderText = "Lost Sales Cost";
-            this.lostSalesCost.Name = "lostSalesCost";
-            this.lostSalesCost.ReadOnly = true;
-            // 
-            // dailyNetCost
-            // 
-            this.dailyNetCost.HeaderText = "Daily Net Cost";
-            this.dailyNetCost.Name = "dailyNetCost";
-            this.dailyNetCost.ReadOnly = true;
-            // 
-            // sumDailyNetCost
-            // 
-            this.sumDailyNetCost.HeaderText = "Accumulator DNC";
-            this.sumDailyNetCost.Name = "sumDailyNetCost";
-            this.sumDailyNetCost.ReadOnly = true;
-            // 
-            // dailyAveregeCost
-            // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle9.Format = "N4";
-            dataGridViewCellStyle9.NullValue = null;
-            this.dailyAveregeCost.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dailyAveregeCost.HeaderText = "Daily Averege Cost";
-            this.dailyAveregeCost.Name = "dailyAveregeCost";
-            this.dailyAveregeCost.ReadOnly = true;
+            this.comboBoxRnd.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxRnd.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxRnd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxRnd.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxRnd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxRnd.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBoxRnd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBoxRnd.ItemHeight = 30;
+            this.comboBoxRnd.Items.AddRange(new object[] {
+            "1",
+            "2"});
+            this.comboBoxRnd.Location = new System.Drawing.Point(35, 125);
+            this.comboBoxRnd.Name = "comboBoxRnd";
+            this.comboBoxRnd.Size = new System.Drawing.Size(65, 36);
+            this.comboBoxRnd.StartIndex = 0;
+            this.comboBoxRnd.TabIndex = 83;
             // 
             // UserControlN1
             // 
@@ -1487,5 +1508,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dailyNetCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn sumDailyNetCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn dailyAveregeCost;
+        private Guna.UI2.WinForms.Guna2ComboBox comboBoxRnd;
     }
 }

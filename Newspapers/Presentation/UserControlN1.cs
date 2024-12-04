@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newspapers.Logic;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Newspapers.Presentation
 {
@@ -16,6 +17,7 @@ namespace Newspapers.Presentation
     {
         Parameters parameters = new Parameters();
         Controller controller;
+        ControllerDifferentRnd controllerDRnd;
 
         public UserControlN1()
         {
@@ -82,6 +84,7 @@ namespace Newspapers.Presentation
         private void btnComenzar_Click(object sender, EventArgs e)
         {
             controller = new Controller(this);
+            controllerDRnd = new ControllerDifferentRnd(this);
             if (txtSimulations.Text != "" && txtFrom.Text != "" && txtTo.Text != "" && txtPrice.Text != "" && txtRepayment.Text != "" && txtLostCost.Text != "" && txtPreviousDemand.Text != "" && txtPreviousLostSales.Text != ""
                 && txtDemand1.Text != "" && txtDemand2.Text != "" && txtDemand3.Text != "" && txtDemand4.Text != "" && txtDemand5.Text != "" && txtDemand6.Text != ""
                 && txtFrequency1.Text != "" && txtFrequency2.Text != "" && txtFrequency3.Text != "" && txtFrequency4.Text != "" && txtFrequency5.Text != "" && txtFrequency6.Text != "")
@@ -137,11 +140,21 @@ namespace Newspapers.Presentation
                     }
                     else
                     {
-                        showFrequencyDemand.Enabled = true;
-                        dgvEvents.Rows.Clear();
-                        validateData(parameters);
-                        controller.startSimulation(this.parameters, Convert.ToInt32(txtSimulations.Text), Convert.ToInt32(txtFrom.Text), Convert.ToInt32(txtTo.Text));
-
+                        if (comboBoxRnd.Text == "1")
+                        {
+                            showFrequencyDemand.Enabled = true;
+                            dgvEvents.Rows.Clear();
+                            validateData(parameters);
+                            controller.startSimulation(this.parameters, Convert.ToInt32(txtSimulations.Text), Convert.ToInt32(txtFrom.Text), Convert.ToInt32(txtTo.Text));
+                        }
+                        else
+                        {
+                            showFrequencyDemand.Enabled = true;
+                            dgvEvents.Rows.Clear();
+                            validateData(parameters);
+                            controllerDRnd.startSimulation(this.parameters, Convert.ToInt32(txtSimulations.Text), Convert.ToInt32(txtFrom.Text), Convert.ToInt32(txtTo.Text));
+                        }
+                        
                     }
                 }
                 else
@@ -269,6 +282,7 @@ namespace Newspapers.Presentation
         private void btnComenzar2_Click(object sender, EventArgs e)
         {
             controller = new Controller(this);
+            controllerDRnd = new ControllerDifferentRnd(this);
             if (txtSimulations.Text != "" && txtFrom.Text != "" && txtTo.Text != "" && txtPrice.Text != "" && txtRepayment.Text != "" && txtLostCost.Text != ""
                 && txtDemand1.Text != "" && txtDemand2.Text != "" && txtDemand3.Text != "" && txtDemand4.Text != "" && txtDemand5.Text != "" && txtDemand6.Text != ""
                 && txtFrequency1.Text != "" && txtFrequency2.Text != "" && txtFrequency3.Text != "" && txtFrequency4.Text != "" && txtFrequency5.Text != "" && txtFrequency6.Text != ""
@@ -349,11 +363,20 @@ namespace Newspapers.Presentation
                     }
                     else
                     {
-                        showFrequencyOrder.Enabled = true;
-                        dgvEventsP2.Rows.Clear();
-                        validateData(parameters);
-                        controller.startSimulationP2(this.parameters, Convert.ToInt32(txtSimulations.Text), Convert.ToInt32(txtFrom.Text), Convert.ToInt32(txtTo.Text));
-
+                        if (comboBoxRnd.Text == "1")
+                        {
+                            showFrequencyOrder.Enabled = true;
+                            dgvEventsP2.Rows.Clear();
+                            validateData(parameters);
+                            controller.startSimulationP2(this.parameters, Convert.ToInt32(txtSimulations.Text), Convert.ToInt32(txtFrom.Text), Convert.ToInt32(txtTo.Text));
+                        }
+                        else
+                        {
+                            showFrequencyOrder.Enabled = true;
+                            dgvEventsP2.Rows.Clear();
+                            validateData(parameters);
+                            controllerDRnd.startSimulationP2(this.parameters, Convert.ToInt32(txtSimulations.Text), Convert.ToInt32(txtFrom.Text), Convert.ToInt32(txtTo.Text));
+                        }                
                     }
                 }
                 else

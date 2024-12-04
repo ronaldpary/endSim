@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logic\Controller.cs" />
+    <Compile Include="Logic\ControllerDifferentRnd.cs" />
     <Compile Include="Logic\Parameters.cs" />
     <Compile Include="Logic\Row.cs" />
     <Compile Include="Logic\RowP2.cs" />
