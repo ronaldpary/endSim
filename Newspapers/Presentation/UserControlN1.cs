@@ -471,5 +471,10 @@ namespace Newspapers.Presentation
             form2.Show();
             showFrequencyOrder.Enabled = false;
         }
+
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }
